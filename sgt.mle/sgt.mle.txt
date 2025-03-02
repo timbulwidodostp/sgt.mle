@@ -1,0 +1,20 @@
+# Olah Data Semarang
+# WhatsApp : +6285227746673
+# IG : @olahdatasemarang_
+# Maximum Likelihood Estimation with the Skewed Generalized T Distribution Use sgt.mle (sgt) With (In) R Software
+install.packages("sgt")
+library("sgt")
+require(graphics)
+require(stats)
+sgt.mle = read.csv("https://raw.githubusercontent.com/timbulwidodostp/sgt.mle/main/sgt.mle/sgt.mle.csv",sep = ";")
+# Estimation Maximum Likelihood Estimation with the Skewed Generalized T Distribution Use sgt.mle (sgt) With (In) R Software
+x1 = sgt.mle$Sgt_mle
+X.f = X ~ x1
+start = list(mu = 0, sigma = 2, lambda = 0, p = 2, q = 12)
+sgt.mle = sgt.mle(X.f = X.f, start = start, finalHessian = "BHHH")
+summary(sgt.mle)
+# Maximum Likelihood Estimation with the Skewed Generalized T Distribution Use sgt.mle (sgt) With (In) R Software
+# Olah Data Semarang
+# WhatsApp : +6285227746673
+# IG : @olahdatasemarang_
+# Finished
